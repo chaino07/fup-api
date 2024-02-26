@@ -1,0 +1,4 @@
+#!/bin/bash
+
+command="docker exec -it fup-api-$1 "${@:2}""
+$command
