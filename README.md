@@ -28,8 +28,8 @@ docker-compose --version
 #### 1. Clone or download this repository.
 
 ```shell
-git clone https://github.com/chaino07/footballup.git
-cd footballup
+git clone https://github.com/chaino07/fup-api.git
+cd fup-api
 ```
 
 #### 2. France.
