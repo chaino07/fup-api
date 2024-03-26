@@ -15,7 +15,11 @@ security:
             security: false
         main:
             lazy: true
+            stateless: true
             provider: app_user_provider
+
+            access_token:
+                token_handler: App\Security\UserTokenHandler
 
             # activate different ways to authenticate
             # https://symfony.com/doc/current/security.html#the-firewall

@@ -12,7 +12,11 @@ use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Serializer\Annotation\SerializedName;
 
-#[API\ApiResource()]
+#[API\GetCollection(security: 'is_granted("ROLE_USER")')]
+#[API\Post()]
+#[API\Get(security: 'is_granted("USER_VIEW", object)')]
+#[API\Delete(security: 'is_granted("USER_EDIT", object)')]
+#[API\Patch(security: 'is_granted("USER_EDIT", object)')]
 #[UniqueEntity(fields: ['email'], message: 'This email address is already in use!')]
 #[ORM\Entity(repositoryClass: UserRepository::class)]
 #[ORM\Table(name: '`user`')]
